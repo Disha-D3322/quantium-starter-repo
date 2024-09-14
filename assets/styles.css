@@ -1,0 +1,43 @@
+/* Styling for the app */
+body {
+    background-color: #000000;
+    font-family: Georgia, serif;
+}
+
+.header {
+    text-align: center;
+    color: #296ca7;
+    margin-top: 20px;
+    font-size: 36px;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.radio-items {
+    color: #d8e0e7;
+    margin: 20px 0 20px 20px;
+    font-size: 18px;
+
+}
+.sales-line-chart {
+    background-color: #000000;
+}
+.sales-summary {
+    background-color: #000000;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+h2 {
+    color: #d9d8df;
+}
+
+/* Styling for the Graph */
+#sales-line-chart {
+    padding: 20px;
+}
