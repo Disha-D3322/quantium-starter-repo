@@ -1,2 +1,2 @@
 I have installed the dash, dash[testing] and panda libraries 
-task 1 of quantium forage is done
+task 1 completed
