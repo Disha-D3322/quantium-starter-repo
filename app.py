@@ -14,12 +14,11 @@ df['date'] = pd.to_datetime(df['date'])
 price_increase_date = pd.Timestamp('2021-01-15')
 
 # Initialize the Dash app
-app = dash.Dash(__name__)
+dash_app = dash.Dash(__name__)
 
 # Create the layout
-app.layout = html.Div([
-    html.H1("SOULFOODS - PINK MORSEL SALES DATA VISUALIZER", className='header'),  # Header
-    
+dash_app.layout = html.Div([
+    html.H1("SOULFOODS - PINK MORSEL SALES DATA VISUALIZER", id='header',className='header'),  # Header
     # Region radio button filter
     html.Label('Select Region:', className='label'),
     dcc.RadioItems(
@@ -43,7 +42,7 @@ app.layout = html.Div([
 ])
 
 # Callback to update the graph based on selected region
-@app.callback(
+@dash_app.callback(
     Output('sales-line-chart', 'figure'),
     Output('sales-summary', 'children'),
     Input('region-filter', 'value')
@@ -81,6 +80,6 @@ def update_chart(selected_region):
 
     return fig, summary
 
-# Run the app
+# Run the dash_app
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    dash_app.run_server(debug=True)
